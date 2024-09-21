@@ -5,19 +5,20 @@ package edu.eci.cvds;
  */
 public class Stock 
 {
-    private HashMap<Product, int> products;
-    private HashMap<String, Agent> agents;
+    private HashMap<Product, Integer> products;
+    private ArrayList<Agent> agents;
     
     /**
      * Método que añade un producto al stock
      * Si el producto no existe, lo crea.
      * Si el producto existe, aumenta su cantidad.
+     * @param id El id del producto.
      * @param name El nombre del producto.
      * @param count La cantidad a añadir.
      *
      * @return true si el producto fue añadido, false en otro caso.
     */
-    public boolean addProduct(String name, int count){
+    public boolean addProduct(String id, String name, int count){
         return false;
     }
 
@@ -25,19 +26,19 @@ public class Stock
      * Método que atualiza un producto en stock.
      * Si el producto existe, lo actualiza.
      * Si el producto no existe, lo crea.
+     * @param id El id del producto.
      * @param name El nombre del producto.
      * @param count La cantidad a añadir.
      *
      * @return true si el producto fue actualizado, false en otro caso.
     */
-    public boolean updateProductCount(String name, int count){
+    public boolean updateProductCount(String id, String name, int count){
         return false;
     }
 
     /**
      * Método que atualiza el nombre de un producto en stock.
      * Si el producto existe, lo actualiza.
-     * Si el producto no existe, lo crea.
      * @param id El id del producto. 
      * @param name El nombre del producto.
      *
@@ -50,17 +51,28 @@ public class Stock
 
     /**
      * Método que añade un observador.
-     * @param name El nombre del producto.
-     * @param count La cnatidad a añadir.
+     * @param agent El objeto Agent.
      *
-     * @return true si el producto fue actualizado, false en otro caso.
+     * @return true si el observador fue añadido, false en otro caso.
     */
-    public boolean updateProductCount(String name, int count){
+    public boolean addObserver(Agent agent){
         return false;
     }
 
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+    /**
+     * Método que elimina un observador.
+     * @param agent El objeto Agent.
+     *
+     * @return true si el observador fue añadido, false en otro caso.
+    */
+    public boolean removeObserver(Agent agent){
+        return false;
+    }
+
+    /**
+     * Método que notifica a todos los observadores que hubo un cambio en el 
+     * stock.
+    */
+    public void notifyObservers(){
     }
 }
