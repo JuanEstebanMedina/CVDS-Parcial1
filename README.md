@@ -11,7 +11,7 @@ Una vez creado el repositorio en GitHub, se clona localmete y e utiliza el sigui
 ```mvn archetype:generate -DgroupId=edu.eci.cvds -DartifactId=products -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false```
 
 Para generar como resultado le siguiente árbol de directorios.
-![alt text](image.png)
+![alt text](img/image.png)
 
 También se añaden las dependencias necesarias que serán utilizadas en el proyecto como:
 - Java 17.x.x
@@ -90,11 +90,11 @@ mvn compile
 mvn test (Aunque aún no hay pruebas realizadas)
 mvn package
 ```
-![alt text](image-1.png)
+![alt text](img/image-1.png)
 
 ### Diseño Diagrama de Clases
 Para el diseño del proyecto se va a utilizar el patrón de diseño `Observador`, esto nos permite crear una relación entre los cambios que se realicen a Stock y notificar a todos los Agentes involucrados, en este caso a WarningAgent y LogAgent.
-![alt text](image-3.png)
+![alt text](img/image-3.png)
 
 ### Implementación
 Utilizando la metodología TDD, primero se definirán los encabezados de las clases necesarias con sus respectivos métodos y documentación.

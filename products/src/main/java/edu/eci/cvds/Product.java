@@ -1,7 +1,7 @@
 package edu.eci.cvds;
 
 /**
- * Sistema de monitoreo de stock de productos.
+ * Productos.
  */
 public class Product
 {
