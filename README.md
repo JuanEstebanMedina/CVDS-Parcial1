@@ -92,6 +92,15 @@ mvn package
 ```
 ![alt text](image-1.png)
 
+### Diseño Diagrama de Clases
+Para el diseño del proyecto se va a utilizar el patrón de diseño `Observador`, esto nos permite crear una relación entre los cambios que se realicen a Stock y notificar a todos los Agentes involucrados, en este caso a WarningAgent y LogAgent.
+![alt text](image-2.png)
+
+También se utilizara la inyección de dependencias mediante Spring para asignar los Agentes que se encargarán de hacer los Log respectivos.
+
+
+
+
 
 
 
