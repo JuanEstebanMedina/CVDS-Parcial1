@@ -12,7 +12,7 @@ public class Product
      * Constructor de la clase Product.
      * @param id El id del Producto.
      * @param name El nombre del producto.
-    */
+    */  
     public Product(String id, String name){
         this.id = id;
         this.name = name;
@@ -20,7 +20,7 @@ public class Product
 
     //getters y setters de la clase Producto.
 
-    public string getId(){
+    public String getId(){
         return id;
     }
     

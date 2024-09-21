@@ -1,5 +1,7 @@
 package edu.eci.cvds;
 
+import java.util.*;
+
 /**
  * Sistema de monitoreo de stock de productos.
  */
@@ -7,6 +9,15 @@ public class Stock
 {
     private HashMap<Product, Integer> products;
     private ArrayList<Agent> agents;
+
+
+    /**
+     * Constructor de la clase Product.
+    */
+    public Stock(){
+        addObserver(new WarningAgent());
+        addObserver(new LogAgent());
+    }
     
     /**
      * Método que añade un producto al stock
