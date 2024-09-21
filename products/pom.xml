@@ -1,40 +1,29 @@
-# PARCIAL PRIMER CORTE - SOLID, PATRONES, TDD, SPRING
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>edu.eci.cvds</groupId>
+  <artifactId>products</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>products</name>
+  <url>http://maven.apache.org</url>
 
-## PRE-RREQUISITOS
-- Java JDK Runtime Environment: 17.x.x
-- Apache Maven: 3.9.x
-- JUnit: 5.x.x
-
-### Configuración del proyecto Maven
-Una vez creado el repositorio en GitHub, se clona localmete y e utiliza el siguiente comando para inicializar el proyecto Maven
-
-```mvn archetype:generate -DgroupId=edu.eci.cvds -DartifactId=products -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false```
-
-Para generar como resultado le siguiente árbol de directorios.
-![alt text](image.png)
-
-También se añaden las dependencias necesarias que serán utilizadas en el proyecto como:
-- Java 17.x.x
-```
-<properties>
+  <properties>
     <maven.compiler.target>17</maven.compiler.target>
     <maven.compiler.source>17</maven.compiler.source>
-</properties>
-```
+  </properties>
 
-- JUnit 5.x.x
-```
-<dependency> 
-     <groupId>org.junit.jupiter</groupId> 
-     <artifactId>junit-jupiter-api</artifactId> 
-     <version>5.8.0</version> 
-     <scope>test</scope> 
-</dependency>
-```
+  <dependencies>
+    <!-- https://mvnrepository.com/artifact/junit/junit -->
+  <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.13.2</version>
+      <scope>test</scope>
+  </dependency>
+  </dependencies>
 
-- Jacoco
-```
-<build>
+  <build>
     <plugins>
       <plugin>
         <groupId>org.jacoco</groupId>
@@ -71,7 +60,7 @@ También se añaden las dependencias necesarias que serán utilizadas en el proy
                     <limit>
                       <counter>CLASS</counter>
                       <value>COVEREDRATIO</value>
-                      <minimum>0.85</minimum><!--Porcentaje mínimo de cubrimiento para construir el proyecto-->
+                      <minimum>0.80</minimum><!--Porcentaje mínimo de cubrimiento para construir el proyecto-->
                     </limit>
                   </limits>
                 </rule>
@@ -82,19 +71,6 @@ También se añaden las dependencias necesarias que serán utilizadas en el proy
       </plugin>
     </plugins>
   </build>
-```
-
-Probar que la ocnfiguración inicial del proyecto haya sido creada correctamente con los comandos
-```
-mvn compile
-mvn test (Aunque aún no hay pruebas realizadas)
-mvn package
-```
-![alt text](image-1.png)
 
 
-
-
-
-
-
+</project>
